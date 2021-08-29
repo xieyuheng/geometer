@@ -1,7 +1,7 @@
 # 代数拓扑入门 / Introduction to Algebraic Topology
 
 - [第一章 -- 代数拓扑之研究](chapter-1.md)
-- [第二章 -- 构造 Cell Complex]((chapter-2.md))
+- [第二章 -- 构造 Cell Complex](chapter-2.md)
 
 - TODO: 流型 / Manifold
 - TODO: 二维流型的分类 / Classification of 2-dim manifolds
