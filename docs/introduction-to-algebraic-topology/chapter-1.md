@@ -31,9 +31,9 @@ date: 2021-08-29
 
   比如，在 **Lambda 演算 / Lambda calculus** 中，
   用 beta-reduction 和 eta-reduction（或 eta-expansion）定义了一个等价关系，
-  我们把 正规形式 定义为，不能再进行 beta-step 和 eta-step 的 lambda expression，
-  我们有算法可以将任意 lambda expression 划归为正规形式，
-  在加上 alpha-equivalence，我们就可以判断任意两个 lambda expression 是否等价了。
+  我们把 正规形式 定义为，不能再进行 beta-step 和 eta-step 的 expression，
+  我们有算法可以将任意 expression 划归为正规形式，
+  在加上 alpha-equivalence，我们就可以判断任意两个 expression 是否等价了。
 
 - 一是策略是，寻找一个 **不变量 / Invariant**
 
