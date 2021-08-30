@@ -3,11 +3,14 @@
 - a 2-dim skeleton of a space defined by cell-complex is a groupoid (group if it has only one node)
 
   - edge -- primitive element  -- "generator" in presentation of group
+
+    - 1-dim elements -- maybe `torus.chain([toro, toro, polo])`
+
   - face -- primitive equivalence -- "relation" in presentation of group
 
   - we can write equivalence proof and let the machine check our proof
 
-    - the same as checking boundary
+    - **not** the same as checking boundary of 3-dim constructor
 
   - we can write equivalence and let the machine search for proofs
 
