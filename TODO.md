@@ -1,10 +1,14 @@
+- abstract `Id` instead of `number`
+
+- `Chain` like `Cell` but no `Id`
+
 # 1-dim algebra
 
 - a 2-dim skeleton of a space defined by cell-complex is a groupoid (group if it has only one node)
 
   - primitive element -- edge -- "generator" in presentation of group
 
-  - elements -- path
+  - element -- path
 
     - `space.path([edge, ...])`
     - `path.concat(path)`
