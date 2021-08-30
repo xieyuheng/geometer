@@ -2,11 +2,18 @@
 
 - a 2-dim skeleton of a space defined by cell-complex is a groupoid (group if it has only one node)
 
-  - edge -- primitive element  -- "generator" in presentation of group
+  - primitive element -- edge -- "generator" in presentation of group
 
-    - 1-dim elements -- maybe `torus.chain([toro, toro, polo])`
+  - elements -- path
 
-  - face -- primitive equivalence -- "relation" in presentation of group
+    - `space.path([edge, ...])`
+    - `path.concat(path)`
+
+  - primitive equivalence -- face -- "relation" in presentation of group
+
+  - equivalence -- let's call this "shell" for now
+
+    - a shell is always bounded by a circuit
 
   - we can write equivalence proof and let the machine check our proof
 
@@ -35,8 +42,8 @@ https://en.wikipedia.org/wiki/Presentation_of_a_group
 
 - a 3-dim skeleton of a space defined by cell-complex is a 2-dim groupoid
 
-  - face -- primitive element
-  - body -- primitive equivalence
+  - primitive element -- face
+  - primitive equivalence -- body
 
 # encoding computing machines
 
