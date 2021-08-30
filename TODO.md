@@ -1,4 +1,10 @@
+> Stop here for terminology from geometric folding.
+>   For we are gluing.
+
 - `Chain` like `Cell` but no `Id`
+
+- `chains/shell`
+- `chains/shell`
 
 # 1-dim algebra
 
