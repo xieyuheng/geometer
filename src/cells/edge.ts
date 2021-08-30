@@ -1,4 +1,5 @@
-import { Cell, Id } from "../cell"
+import { Cell } from "../cell"
+import { Id } from "../complex"
 import * as Cells from "../cells"
 import * as Sphericals from "../sphericals"
 
@@ -14,7 +15,7 @@ export class Edge extends Cell {
 
   repr(): string {
     const { start, end } = this.boundary
-    return `${this.id}: ${start.repr()} -> ${end.repr()}`
+    return `${this.id.repr()}: ${start.repr()} -> ${end.repr()}`
   }
 
   get inverse(): InversedEdge {

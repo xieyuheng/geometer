@@ -1,4 +1,5 @@
 import { Spherical } from "../spherical"
+import { Id } from "../complex"
 import * as Cells from "../cells"
 
 export class Polyhedron extends Spherical {
@@ -40,9 +41,9 @@ export class Joint {
 
   repr(): string {
     let s = "  "
-    s += `(${this.left_face.id}) -> ${this.left_side}`
+    s += `${this.left_face.id.repr()} -> ${this.left_side}`
     s += ` * `
-    s += `${this.right_side} <- (${this.right_face.id})`
+    s += `${this.right_side} <- ${this.right_face.id.repr()}`
     return s
   }
 }
@@ -58,33 +59,31 @@ function joints_check(joints: Array<Joint>): void {
   }
 
   // NOTE record from face to occurred sides
-  const record: Map<
-    number,
-    {
-      face: Cells.Face
-      sides: Array<number>
-    }
-  > = new Map()
+  const record: Map<Id, { face: Cells.Face; sides: Array<number> }> = new Map()
 
   for (const joint of joints) {
     {
       const value = record.get(joint.left_face.id)
-      if (value) value.sides.push(joint.left_side)
-      else
+      if (value) {
+        value.sides.push(joint.left_side)
+      } else {
         record.set(joint.left_face.id, {
           face: joint.left_face,
           sides: [joint.left_side],
         })
+      }
     }
 
     {
       const value = record.get(joint.right_face.id)
-      if (value) value.sides.push(joint.right_side)
-      else
+      if (value) {
+        value.sides.push(joint.right_side)
+      } else {
         record.set(joint.right_face.id, {
           face: joint.right_face,
           sides: [joint.right_side],
         })
+      }
     }
   }
 

@@ -1,6 +1,5 @@
 import { Spherical } from "../spherical"
-
-export type Id = number
+import { Id } from "../complex"
 
 export abstract class Cell {
   instanceofCell = true
@@ -10,6 +9,6 @@ export abstract class Cell {
   abstract repr(): string
 
   eq(that: Cell): boolean {
-    return this.id === that.id
+    return this.id.eq(that.id)
   }
 }

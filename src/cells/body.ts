@@ -1,4 +1,5 @@
-import { Cell, Id } from "../cell"
+import { Cell } from "../cell"
+import { Id } from "../complex"
 import * as Cells from "../cells"
 import * as Sphericals from "../sphericals"
 
@@ -16,6 +17,6 @@ export class Body extends Cell {
     const joins_repr = this.boundary.joints
       .map((joint) => joint.repr())
       .join("\n")
-    return `${this.id}: {\n${joins_repr}\n}`
+    return `${this.id.repr()}: {\n${joins_repr}\n}`
   }
 }

@@ -1,4 +1,5 @@
-import { Cell, Id } from "../cell"
+import { Cell } from "../cell"
+import { Id } from "../complex"
 import * as Sphericals from "../sphericals"
 
 export class Node extends Cell {
@@ -12,6 +13,6 @@ export class Node extends Cell {
   }
 
   repr(): string {
-    return `${this.id}`
+    return `${this.id.repr()}`
   }
 }

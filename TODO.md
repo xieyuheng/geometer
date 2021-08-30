@@ -1,5 +1,3 @@
-- abstract `Id` instead of `number`
-
 - `Chain` like `Cell` but no `Id`
 
 # 1-dim algebra
