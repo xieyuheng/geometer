@@ -1,5 +1,6 @@
-- `elements/path`
+- rename element to compound
 
+- `elements/path`
 - `elements/shell`
 
 - `api` -- toplevel API -- namespace `glue`
