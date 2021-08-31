@@ -1,7 +1,8 @@
-import { Spherical } from "../spherical"
 import { Id } from "../complex"
+import { Element } from "../element"
+import { Spherical } from "../spherical"
 
-export abstract class Cell {
+export abstract class Cell extends Element {
   instanceofCell = true
 
   abstract id: Id

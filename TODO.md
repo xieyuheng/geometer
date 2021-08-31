@@ -1,8 +1,5 @@
-- `Piece` like `Cell` but no `Id`
-
-- `pieces/path`
-
-- `pieces/shell`
+- `elements/path`
+- `elements/shell`
 
 # 1-dim algebra
 
