@@ -6,7 +6,7 @@ export class Polygon extends Spherical {
 
   constructor(circuit: Cells.Edge[]) {
     super()
-    circuit_check(circuit)
+    check_circuit(circuit)
     this.circuit = circuit
   }
 
@@ -15,7 +15,7 @@ export class Polygon extends Spherical {
   }
 }
 
-function circuit_check(circuit: Cells.Edge[]): void {
+function check_circuit(circuit: Cells.Edge[]): void {
   if (circuit.length === 0)
     throw new Error("Circuit should at least have one edge.")
 

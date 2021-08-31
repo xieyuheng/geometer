@@ -1,5 +1,13 @@
 - `elements/path`
+
 - `elements/shell`
+
+- `api` -- toplevel API -- namespace `glue`
+
+  - `glue.path`
+  - `glue.shell`
+
+- face should have named boundary position
 
 # 1-dim algebra
 

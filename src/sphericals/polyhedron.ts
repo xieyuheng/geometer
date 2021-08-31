@@ -8,7 +8,7 @@ export class Polyhedron extends Spherical {
   constructor(pairs: Array<[Cells.Face, number, number, Cells.Face]>) {
     super()
     const joints = pairs.map((pair) => new Joint(...pair))
-    joints_check(joints)
+    check_joints(joints)
     this.joints = joints
   }
 }
@@ -48,7 +48,7 @@ export class Joint {
   }
 }
 
-function joints_check(joints: Array<Joint>): void {
+function check_joints(joints: Array<Joint>): void {
   if (joints.length === 0)
     throw new Error("To build a polyhedron, joints can not be empty.")
 
