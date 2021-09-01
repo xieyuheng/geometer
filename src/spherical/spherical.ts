@@ -2,7 +2,6 @@
 //   requires `Spherical` to be special `Complex`,
 //   but we do not implement it this way yet.
 
-export abstract class Spherical {
-  instanceofSpherical = true
+export interface Spherical {
   // TODO evidence
 }

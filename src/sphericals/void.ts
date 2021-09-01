@@ -1,3 +1,3 @@
 import { Spherical } from "../spherical"
 
-export class Void extends Spherical {}
+export class Void implements Spherical {}

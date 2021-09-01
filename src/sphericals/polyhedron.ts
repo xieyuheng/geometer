@@ -2,11 +2,10 @@ import { Spherical } from "../spherical"
 import { Id } from "../complex"
 import * as Cells from "../cells"
 
-export class Polyhedron extends Spherical {
+export class Polyhedron implements Spherical {
   joints: Array<Joint>
 
   constructor(pairs: Array<[Cells.Face, number, number, Cells.Face]>) {
-    super()
     const joints = pairs.map((pair) => new Joint(...pair))
     check_joints(joints)
     this.joints = joints

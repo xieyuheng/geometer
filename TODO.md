@@ -1,5 +1,3 @@
-- `special` as interface -- instead of abstract class -- for multiple inheritance
-
 - `elements/path`
 
 - `cells/edge` as special path

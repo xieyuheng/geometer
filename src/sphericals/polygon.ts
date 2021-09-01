@@ -1,11 +1,10 @@
 import { Spherical } from "../spherical"
 import * as Cells from "../cells"
 
-export class Polygon extends Spherical {
+export class Polygon implements Spherical {
   circuit: Array<Cells.Edge>
 
   constructor(circuit: Cells.Edge[]) {
-    super()
     check_circuit(circuit)
     this.circuit = circuit
   }
