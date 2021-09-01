@@ -23,11 +23,11 @@ function check_circuit(circuit: Cells.Edge[]): void {
   const rest = circuit.slice(1)
   const last = circuit[circuit.length - 1]
 
-  if (!head.boundary.start.eq(last.boundary.end))
+  if (!head.boundary.start.id.eq(last.boundary.end.id))
     throw new Error("Circuit is not closed.")
 
   for (const edge of rest) {
-    if (!head.boundary.end.eq(edge.boundary.start))
+    if (!head.boundary.end.id.eq(edge.boundary.start.id))
       throw new Error("Circuit is not closed.")
 
     head = edge

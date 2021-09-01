@@ -1,4 +1,3 @@
-- `cell` as interface -- instead of abstract class -- for multiple inheritance
 - `special` as interface -- instead of abstract class -- for multiple inheritance
 
 - `elements/path`

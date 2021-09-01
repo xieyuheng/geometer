@@ -53,7 +53,7 @@ function check_joints(joints: Array<Joint>): void {
     throw new Error("To build a polyhedron, joints can not be empty.")
 
   for (const joint of joints) {
-    if (!joint.left_segment.eq(joint.right_segment)) {
+    if (!joint.left_segment.id.eq(joint.right_segment.id)) {
       throw new Error("In a joint paired sides should be the same edge.")
     }
   }

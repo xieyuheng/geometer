@@ -32,7 +32,7 @@ function check_path(edges: Cells.Edge[]): void {
 
   for (let i = 0; i < edges.length; i++) {
     if (edges[i + 1] === undefined) return
-    if (!edges[i].boundary.end.eq(edges[i + 1].boundary.start)) {
+    if (!edges[i].boundary.end.id.eq(edges[i + 1].boundary.start.id)) {
       const end = edges[i].boundary.end.repr()
       const start = edges[i + 1].boundary.start.repr()
       throw new Errors.BoundaryMismatch(

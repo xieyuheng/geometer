@@ -3,12 +3,11 @@ import { Id } from "../complex"
 import * as Cells from "../cells"
 import * as Sphericals from "../sphericals"
 
-export class Face extends Cell {
+export class Face implements Cell {
   id: Id
   boundary: Sphericals.Polygon
 
   constructor(id: Id, boundary: Sphericals.Polygon) {
-    super()
     this.id = id
     this.boundary = boundary
   }
