@@ -15,7 +15,7 @@
 
 # 1-dim algebra
 
-- a 2-dim skeleton of a space defined by cell-complex is a groupoid (group if it has only one node)
+- a 2-dim skeleton of a space (defined by cell-complex) is a groupoid (group if it has only one node)
 
   - primitive element -- edge -- "generator" in presentation of group
 
@@ -52,7 +52,7 @@ https://en.wikipedia.org/wiki/Presentation_of_a_group
 
 - [outdated]  improve `joints_check` error report
 
-- a 3-dim skeleton of a space defined by cell-complex is a 2-dim groupoid
+- a 3-dim skeleton of a space (defined by cell-complex) is a 2-dim groupoid
 
   - primitive element -- face
   - primitive equivalence -- body
