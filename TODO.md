@@ -1,15 +1,19 @@
-- `elements/path`
+- rename `Errors.InvalideElement` to `Errors.BoundaryMismatch`
 
+- `elements/path`
+- `elements/concat-path`
 - `cells/edge` as special path
 
+- `cells/face` should have named boundary position
+
+- `elements/surface` should have named boundary position
+
 - `elements/surface`
+- `elements/sew-surface`
 
-- `api` -- toplevel API -- namespace `glue`
-
-  - `glue.path`
-  - `glue.surface`
-
-- face should have named boundary position
+- `api` -- toplevel API
+   - `ld.path` -- use `elements/concat-path`
+   - `ld.surface` -- use `elements/sew-surface`
 
 # 1-dim algebra
 
@@ -18,9 +22,6 @@
   - primitive element -- edge -- "generator" in presentation of group
 
   - element -- path
-
-    - `space.path([edge, ...])`
-    - `path.concat(path)`
 
   - primitive equivalence -- face -- "relation" in presentation of group
 

@@ -1,8 +1,8 @@
-import { Element } from "../element"
-import { Spherical } from "../spherical"
-import * as Cells from "../cells"
-import * as Sphericals from "../sphericals"
-import * as Errors from "../errors"
+import { Element } from "../../element"
+import { Spherical } from "../../spherical"
+import * as Cells from "../../cells"
+import * as Sphericals from "../../sphericals"
+import * as Errors from "../../errors"
 
 export class Path implements Element {
   edges: Cells.Edge[]
