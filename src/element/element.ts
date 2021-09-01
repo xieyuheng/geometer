@@ -1,6 +1,6 @@
 import { Spherical } from "../spherical"
 
-export abstract class Element {
-  abstract boundary: Spherical
-  abstract repr(): string
+export interface Element {
+  boundary: Spherical
+  repr(): string
 }

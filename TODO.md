@@ -1,12 +1,16 @@
-- rename element to compound
+- `cell` as interface -- instead of abstract class -- for multiple inheritance
+- `special` as interface -- instead of abstract class -- for multiple inheritance
 
 - `elements/path`
-- `elements/shell`
+
+- `cells/edge` as special path
+
+- `elements/surface`
 
 - `api` -- toplevel API -- namespace `glue`
 
   - `glue.path`
-  - `glue.shell`
+  - `glue.surface`
 
 - face should have named boundary position
 
@@ -23,9 +27,9 @@
 
   - primitive equivalence -- face -- "relation" in presentation of group
 
-  - equivalence -- let's call this "shell" for now
+  - equivalence -- surface
 
-    - a shell is always bounded by a circuit
+    - a surface is always bounded by a circuit
 
   - we can write equivalence proof and let the machine check our proof
 

@@ -4,11 +4,10 @@ import * as Cells from "../cells"
 import * as Sphericals from "../sphericals"
 import * as Errors from "../errors"
 
-export class Path extends Element {
+export class Path implements Element {
   edges: Cells.Edge[]
 
   constructor(edges: Cells.Edge[]) {
-    super()
     check_path(edges)
     this.edges = edges
   }
