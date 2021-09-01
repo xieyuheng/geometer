@@ -27,7 +27,9 @@ export class Path implements Element {
 
 function check_path(edges: Cells.Edge[]): void {
   if (edges.length === 0) {
-    throw new Error("The edges should at least have one edge.")
+    throw new Errors.InvalideElement(
+      "To form a path, the edges should at least have one edge."
+    )
   }
 
   for (let i = 0; i < edges.length; i++) {
@@ -35,7 +37,7 @@ function check_path(edges: Cells.Edge[]): void {
     if (!edges[i].boundary.end.id.eq(edges[i + 1].boundary.start.id)) {
       const end = edges[i].boundary.end.repr()
       const start = edges[i + 1].boundary.start.repr()
-      throw new Errors.BoundaryMismatch(
+      throw new Errors.InvalideElement(
         [
           `The given edges does **not** form a path, due to boundary mismatch:`,
           `  edges[${i}].boundary.end: ${end} `,

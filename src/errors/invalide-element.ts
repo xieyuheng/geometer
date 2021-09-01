@@ -1,4 +1,4 @@
-export class BoundaryMismatch extends Error {
+export class InvalideElement extends Error {
   message: string
 
   constructor(message: string) {

@@ -1,5 +1,3 @@
-- rename `Errors.InvalideElement` to `Errors.BoundaryMismatch`
-
 - `elements/path`
 - `elements/concat-path`
 - `cells/edge` as special path
