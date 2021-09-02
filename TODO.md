@@ -1,7 +1,3 @@
-- `elements/path`
-- `elements/concat-path`
-- `cells/edge` as special path
-
 - `cells/face` should have named boundary position
 
 - `elements/surface` should have named boundary position

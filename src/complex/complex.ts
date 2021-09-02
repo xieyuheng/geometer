@@ -20,10 +20,10 @@ export class Id {
 }
 
 export class Complex {
-  nodes: Cells.Node[]
-  edges: Cells.Edge[]
-  faces: Cells.Face[]
-  bodies: Cells.Body[]
+  nodes: Array<Cells.Node>
+  edges: Array<Cells.Edge>
+  faces: Array<Cells.Face>
+  bodies: Array<Cells.Body>
 
   constructor() {
     this.nodes = []
@@ -46,7 +46,7 @@ export class Complex {
     return edge
   }
 
-  face(circuit: Cells.Edge[]): Cells.Face {
+  face(circuit: Array<Cells.Edge>): Cells.Face {
     const id = new Id(2, this.face.length)
     const face = new Cells.Face(id, new Sphericals.Polygon(circuit))
     this.faces.push(face)

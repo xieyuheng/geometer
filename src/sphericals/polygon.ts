@@ -4,7 +4,7 @@ import * as Cells from "../cells"
 export class Polygon implements Spherical {
   circuit: Array<Cells.Edge>
 
-  constructor(circuit: Cells.Edge[]) {
+  constructor(circuit: Array<Cells.Edge>) {
     check_circuit(circuit)
     this.circuit = circuit
   }
@@ -14,7 +14,7 @@ export class Polygon implements Spherical {
   }
 }
 
-function check_circuit(circuit: Cells.Edge[]): void {
+function check_circuit(circuit: Array<Cells.Edge>): void {
   if (circuit.length === 0)
     throw new Error("Circuit should at least have one edge.")
 

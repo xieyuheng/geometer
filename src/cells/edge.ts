@@ -1,9 +1,10 @@
 import { Cell } from "../cell"
 import { Id } from "../complex"
 import * as Cells from "../cells"
+import * as Elements from "../elements"
 import * as Sphericals from "../sphericals"
 
-export class Edge implements Cell {
+export class Edge implements Cell, Elements.Path {
   id: Id
   boundary: Sphericals.Endpoints
 
