@@ -1,5 +1,3 @@
-- `Polygon` should be build from `Path`
-
 - stub `elements/surface`
 
 - `cells/face` should have named boundary position

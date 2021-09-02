@@ -4,20 +4,20 @@ import * as Elements from "../elements"
 import * as Errors from "../errors"
 
 export class Polygon implements Spherical {
-  circuit: Array<Elements.Path>
+  circuit: Array<Cells.Edge>
 
-  constructor(paths: Array<Elements.Path>) {
-    check_circuit(paths)
-    Elements.check_paths(paths)
-    this.circuit = paths
+  constructor(edges: Array<Cells.Edge>) {
+    check_circuit(edges)
+    Elements.check_paths(edges)
+    this.circuit = edges
   }
 
-  segment(i: number): Elements.Path {
+  segment(i: number): Cells.Edge {
     return this.circuit[i]
   }
 }
 
-function check_circuit(circuit: Array<Elements.Path>): void {
+function check_circuit(circuit: Array<Cells.Edge>): void {
   const head = circuit[0]
   const last = circuit[circuit.length - 1]
 

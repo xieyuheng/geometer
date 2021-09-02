@@ -47,9 +47,9 @@ export class Complex {
     return edge
   }
 
-  face(paths: Array<Elements.Path>): Cells.Face {
+  face(edges: Array<Cells.Edge>): Cells.Face {
     const id = new Id(2, this.face.length)
-    const face = new Cells.Face(id, new Sphericals.Polygon(paths))
+    const face = new Cells.Face(id, new Sphericals.Polygon(edges))
     this.faces.push(face)
     return face
   }

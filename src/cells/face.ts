@@ -15,7 +15,7 @@ export class Face implements Cell {
 
   repr(): string {
     const boundary_repr = this.boundary.circuit
-      .map((path) => path.repr())
+      .map((edge) => `${edge.sign === 1 ? "+" : "-"}${edge.id.repr()}`)
       .join(", ")
     return `${this.id.repr()}: [${boundary_repr}]`
   }
