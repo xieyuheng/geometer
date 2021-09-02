@@ -1,34 +1,26 @@
 import { Spherical } from "../spherical"
 import * as Cells from "../cells"
+import * as Elements from "../elements"
+import * as Errors from "../errors"
 
 export class Polygon implements Spherical {
-  circuit: Array<Cells.Edge>
+  circuit: Array<Elements.Path>
 
-  constructor(circuit: Array<Cells.Edge>) {
-    check_circuit(circuit)
-    this.circuit = circuit
+  constructor(paths: Array<Elements.Path>) {
+    check_circuit(paths)
+    Elements.check_paths(paths)
+    this.circuit = paths
   }
 
-  segment(i: number): Cells.Edge {
+  segment(i: number): Elements.Path {
     return this.circuit[i]
   }
 }
 
-function check_circuit(circuit: Array<Cells.Edge>): void {
-  if (circuit.length === 0)
-    throw new Error("Circuit should at least have one edge.")
-
-  let head = circuit[0]
-  const rest = circuit.slice(1)
+function check_circuit(circuit: Array<Elements.Path>): void {
+  const head = circuit[0]
   const last = circuit[circuit.length - 1]
 
   if (!head.boundary.start.id.eq(last.boundary.end.id))
-    throw new Error("Circuit is not closed.")
-
-  for (const edge of rest) {
-    if (!head.boundary.end.id.eq(edge.boundary.start.id))
-      throw new Error("Circuit is not closed.")
-
-    head = edge
-  }
+    throw new Errors.InvalideElement("Circuit is not closed.")
 }

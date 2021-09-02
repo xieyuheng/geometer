@@ -1,13 +1,19 @@
+- `Polygon` should be build from `Path`
+
+- stub `elements/surface`
+
 - `cells/face` should have named boundary position
 
 - `elements/surface` should have named boundary position
 
 - `elements/surface`
-- `elements/sew-surface`
+- `elements/glue-surface`
 
 - `api` -- toplevel API
    - `ld.path` -- use `elements/concat-path`
-   - `ld.surface` -- use `elements/sew-surface`
+   - `ld.surface` -- use `elements/glue-surface`
+
+- `ConcatPath.repr` print the whole expression -- not just boundary
 
 # 1-dim algebra
 

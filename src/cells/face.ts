@@ -1,6 +1,7 @@
 import { Cell } from "../cell"
 import { Id } from "../complex"
 import * as Cells from "../cells"
+import * as Elements from "../elements"
 import * as Sphericals from "../sphericals"
 
 export class Face implements Cell {
@@ -13,10 +14,9 @@ export class Face implements Cell {
   }
 
   repr(): string {
-    const edge_repr = (edge: Cells.Edge) =>
-      `${edge.sign === -1 ? "-" : ""}${edge.id.repr()}`
-    return `${this.id.repr()}: [${this.boundary.circuit
-      .map(edge_repr)
-      .join(", ")}]`
+    const boundary_repr = this.boundary.circuit
+      .map((path) => path.repr())
+      .join(", ")
+    return `${this.id.repr()}: [${boundary_repr}]`
   }
 }

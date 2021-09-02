@@ -1,4 +1,5 @@
 import * as Cells from "../cells"
+import * as Elements from "../elements"
 import * as Sphericals from "../sphericals"
 
 export class Id {
@@ -46,9 +47,9 @@ export class Complex {
     return edge
   }
 
-  face(circuit: Array<Cells.Edge>): Cells.Face {
+  face(paths: Array<Elements.Path>): Cells.Face {
     const id = new Id(2, this.face.length)
-    const face = new Cells.Face(id, new Sphericals.Polygon(circuit))
+    const face = new Cells.Face(id, new Sphericals.Polygon(paths))
     this.faces.push(face)
     return face
   }

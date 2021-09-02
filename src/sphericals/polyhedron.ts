@@ -1,6 +1,7 @@
 import { Spherical } from "../spherical"
 import { Id } from "../complex"
 import * as Cells from "../cells"
+import * as Elements from "../elements"
 
 export class Polyhedron implements Spherical {
   joints: Array<Joint>
@@ -30,11 +31,11 @@ export class Joint {
     this.right_side = right_side
   }
 
-  get left_segment(): Cells.Edge {
+  get left_segment(): Elements.Path {
     return this.left_face.boundary.segment(this.left_side)
   }
 
-  get right_segment(): Cells.Edge {
+  get right_segment(): Elements.Path {
     return this.right_face.boundary.segment(this.right_side)
   }
 
@@ -52,9 +53,10 @@ function check_joints(joints: Array<Joint>): void {
     throw new Error("To build a polyhedron, joints can not be empty.")
 
   for (const joint of joints) {
-    if (!joint.left_segment.id.eq(joint.right_segment.id)) {
-      throw new Error("In a joint paired sides should be the same edge.")
-    }
+    // TODO we need `eq` on `Path`
+    // if (!joint.left_segment.id.eq(joint.right_segment.id)) {
+    //   throw new Error("In a joint paired sides should be the same edge.")
+    // }
   }
 
   // NOTE record from face to occurred sides
