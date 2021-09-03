@@ -1,4 +1,15 @@
-- `elements/glue-surface` -- should have named boundary position
+- `Goal`
+
+- `goals/face-goal`
+
+- `Face.o` -- like logic programming's goal
+
+- `Polyhedron` -- should have named boundary faces
+
+- `elements/glue-surface` -- create from `({...}: Toolkit) => ...`
+
+- `elements/glue-surface` -- `check_surfaces`
+- `polyhedron` -- `check_surfaces_close`
 
 - `api` -- toplevel API
    - `ld.path` -- use `elements/concat-path`

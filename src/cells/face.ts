@@ -19,4 +19,8 @@ export class Face implements Cell, Elements.Surface {
       .join(", ")
     return `${this.id.repr()}: [${boundary_repr}]`
   }
+
+  // o(vars: Record<string, Var>): Goal {
+
+  // }
 }
