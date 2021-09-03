@@ -1,14 +1,15 @@
-- `Goal`
-
-- `goals/surface-goal`
-
 - `Face.o` -- like logic programming's goal
+
+  - what should be the result class name?
 
 - `Polyhedron` -- should have named boundary faces
 
-- `elements/glue-surface` -- create from `({...}: Toolkit) => ...`
+- `elements/glue-surface`
+
+  - do not need named sub-surfaces, for now
 
 - `elements/glue-surface` -- `check_surfaces`
+
 - `polyhedron` -- `check_surfaces_close`
 
 - `api` -- toplevel API
