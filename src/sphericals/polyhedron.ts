@@ -89,7 +89,7 @@ function check_joints(joints: Array<Joint>): void {
 
   // NOTE every side of every face must be used once.
   for (const { face, sides } of record.values()) {
-    if (face.boundary.circuit.length !== sides.length) {
+    if (Object.values(face.boundary.edges).length !== sides.length) {
       throw new Error(
         "In a polyhedron, every side of every face must be used once."
       )

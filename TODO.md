@@ -1,5 +1,3 @@
-- `cells/face` should have named boundary position
-
 - `elements/glue-surface` -- should have named boundary position
 
 - `api` -- toplevel API
@@ -20,7 +18,7 @@
 
   - equivalence -- surface
 
-    - a surface is always bounded by a circuit
+    - a surface is always bounded by a edges
 
   - we can write equivalence proof and let the machine check our proof
 

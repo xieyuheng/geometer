@@ -9,9 +9,24 @@ import { Complex } from "../.."
   const b = d3_torus.edge(o, o)
   const c = d3_torus.edge(o, o)
 
-  const ap = d3_torus.face([c, b, c.inverse, b.inverse])
-  const bp = d3_torus.face([a, c, a.inverse, c.inverse])
-  const cp = d3_torus.face([b, a, b.inverse, a.inverse])
+  const ap = d3_torus.face({
+    0: c,
+    1: b,
+    2: c.inverse,
+    3: b.inverse,
+  })
+  const bp = d3_torus.face({
+    0: a,
+    1: c,
+    2: a.inverse,
+    3: c.inverse,
+  })
+  const cp = d3_torus.face({
+    0: b,
+    1: a,
+    2: b.inverse,
+    3: a.inverse,
+  })
 
   const s = d3_torus.body([
     [bp, 0, 3, cp],

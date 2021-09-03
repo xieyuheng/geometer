@@ -4,23 +4,32 @@ import * as Elements from "../elements"
 import * as Errors from "../errors"
 
 export class Polygon implements Spherical {
-  circuit: Array<Cells.Edge>
+  edges: Record<string, Cells.Edge>
 
-  constructor(edges: Array<Cells.Edge>) {
-    check_circuit(edges)
-    Elements.check_paths(edges)
-    this.circuit = edges
+  constructor(edges: Record<string, Cells.Edge>) {
+    check_edges_close(Object.values(edges))
+    Elements.check_paths(Object.values(edges))
+    this.edges = edges
+  }
+
+  edge(name: string): Cells.Edge {
+    const edge = this.edges[name]
+    if (edge === undefined) {
+      throw new Error(`Unknown edge name: ${name}`)
+    }
+    return edge
   }
 
   segment(i: number): Cells.Edge {
-    return this.circuit[i]
+    return Object.values(this.edges)[i]
   }
 }
 
-function check_circuit(circuit: Array<Cells.Edge>): void {
-  const head = circuit[0]
-  const last = circuit[circuit.length - 1]
+function check_edges_close(edges: Array<Cells.Edge>): void {
+  const head = edges[0]
+  const last = edges[edges.length - 1]
 
-  if (!head.boundary.start.id.eq(last.boundary.end.id))
-    throw new Errors.InvalideElement("Circuit is not closed.")
+  if (!head.boundary.start.id.eq(last.boundary.end.id)) {
+    throw new Errors.InvalideElement("The edges do not close.")
+  }
 }
