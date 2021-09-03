@@ -1,7 +1,5 @@
 - `cells/face` should have named boundary position
 
-- `cells/face` as special `elements/surface`
-
 - `elements/glue-surface` -- should have named boundary position
 
 - `api` -- toplevel API

@@ -4,7 +4,7 @@ import * as Cells from "../cells"
 import * as Elements from "../elements"
 import * as Sphericals from "../sphericals"
 
-export class Face implements Cell {
+export class Face implements Cell, Elements.Surface {
   id: Id
   boundary: Sphericals.Polygon
 
