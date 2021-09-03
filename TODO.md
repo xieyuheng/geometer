@@ -1,6 +1,6 @@
 - `Goal`
 
-- `goals/face-goal`
+- `goals/surface-goal`
 
 - `Face.o` -- like logic programming's goal
 
