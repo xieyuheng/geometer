@@ -1,11 +1,8 @@
-- stub `elements/surface`
-
 - `cells/face` should have named boundary position
 
-- `elements/surface` should have named boundary position
+- `cells/face` as special `elements/surface`
 
-- `elements/surface`
-- `elements/glue-surface`
+- `elements/glue-surface` -- should have named boundary position
 
 - `api` -- toplevel API
    - `ld.path` -- use `elements/concat-path`
