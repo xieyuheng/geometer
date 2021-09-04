@@ -15,8 +15,6 @@ import ld, { Complex } from ".."
     d: polo.inverse,
   })
 
-  console.log(torus.repr())
-
   const path = ld.path([
     toro,
     polo,
