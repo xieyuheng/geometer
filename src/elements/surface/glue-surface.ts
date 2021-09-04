@@ -20,3 +20,8 @@ export class GlueSurface implements Surface {
 //   cp.o({ 0: "c0", 1: "c1", 2: "c2", 3: "b0" }),
 //   glue("c0", "c1"),
 // ])
+
+// "b3": [ap, "0"]
+// "c2": [ap, "1"]
+// "a2": [ap, "2"]
+// "c0": [ap, "3"]

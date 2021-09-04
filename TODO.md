@@ -1,6 +1,10 @@
-- `Face.o` -- like logic programming's goal
+- use TDD to make the design easy
 
-  - what should be the result class name?
+- `api` -- toplevel API
+   - `ld.path` -- use `elements/concat-path`
+   - `ld.surface` -- use `elements/glue-surface`
+
+- `Face.o` -- like logic programming's goal -- `FaceGoal`
 
 - `Polyhedron` -- should have named boundary faces
 
@@ -11,10 +15,6 @@
 - `elements/glue-surface` -- `check_surfaces`
 
 - `polyhedron` -- `check_surfaces_close`
-
-- `api` -- toplevel API
-   - `ld.path` -- use `elements/concat-path`
-   - `ld.surface` -- use `elements/glue-surface`
 
 - `ConcatPath.repr` print the whole expression -- not just boundary
 

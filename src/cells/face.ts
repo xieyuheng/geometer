@@ -3,6 +3,7 @@ import { Id } from "../complex"
 import * as Cells from "../cells"
 import * as Elements from "../elements"
 import * as Sphericals from "../sphericals"
+import * as Goals from "../goals"
 
 export class Face implements Cell, Elements.Surface {
   id: Id
@@ -20,7 +21,9 @@ export class Face implements Cell, Elements.Surface {
     return `${this.id.repr()}: [${boundary_repr}]`
   }
 
-  // o(vars: Record<string, Var>): Goal {
-
-  // }
+  o(vars: Record<string, string>): Goals.FaceGoal {
+    // TODO check the polygon has faces
+    // TODO revers the mapping
+    throw new Error()
+  }
 }
