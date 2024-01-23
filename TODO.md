@@ -18,6 +18,14 @@ use TDD to make the design easy
 
 `ConcatPath.format` print the whole expression -- not just boundary
 
+# referneces
+
+[download] referneces
+
+Bartels, R., J. Beatty and R. Barsky (1987) An Introduction to Splines for Use in Computer Graphics and Geometric Modeling
+Farin, G., (1988) Curves and Surfaces for Computer Aided Geometric Design
+Mortenson, M., (1985) Geometric Modeling
+
 # 1-dim algebra
 
 a 2-dim skeleton of a space (defined by cell-complex) is a groupoid (group if it has only one node)
