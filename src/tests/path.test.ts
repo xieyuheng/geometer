@@ -1,4 +1,4 @@
-import ld, { Complex } from "../index.js"
+import { Complex, gm } from "../index.js"
 
 {
   const torus = new Complex()
@@ -15,18 +15,18 @@ import ld, { Complex } from "../index.js"
     d: polo.inverse,
   })
 
-  const path = ld.path([
+  const path = gm.path([
     toro,
     polo,
     toro,
-    ld.path([toro, toro, toro]),
-    ld.path([toro, toro, toro]),
-    ld.path([
+    gm.path([toro, toro, toro]),
+    gm.path([toro, toro, toro]),
+    gm.path([
       toro,
       toro,
       toro,
-      ld.path([toro, toro, toro]),
-      ld.path([toro, toro, toro]),
+      gm.path([toro, toro, toro]),
+      gm.path([toro, toro, toro]),
     ]),
   ])
 }

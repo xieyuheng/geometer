@@ -1,5 +1,3 @@
-rename ld to gm
-
 [maybe] we should not use class -- maybe we should for the inter-references
 
 use TDD to make the design easy
