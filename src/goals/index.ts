@@ -1,1 +1,1 @@
-export * from "./face-goal"
+export * from "./FaceGoal.js"

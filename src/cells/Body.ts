@@ -1,6 +1,6 @@
-import { Cell } from "../cell"
-import { Id } from "../complex"
-import * as Sphericals from "../sphericals"
+import { type Cell } from "../cell/index.js"
+import { Id } from "../complex/index.js"
+import * as Sphericals from "../sphericals/index.js"
 
 export class Body implements Cell {
   id: Id

@@ -1,1 +1,1 @@
-export * from "./Subst"
+export * from "./Subst.js"

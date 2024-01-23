@@ -1,1 +1,1 @@
-export * from "./GoalQueue"
+export * from "./GoalQueue.js"

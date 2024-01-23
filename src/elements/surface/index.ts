@@ -1,2 +1,2 @@
-export * from "./GlueSurface"
-export * from "./Surface"
+export * from "./GlueSurface.js"
+export * from "./Surface.js"

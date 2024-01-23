@@ -1,6 +1,6 @@
-import * as Cells from "../cells"
-import { Id } from "../complex"
-import { Spherical } from "../spherical"
+import * as Cells from "../cells/index.js"
+import { Id } from "../complex/index.js"
+import { type Spherical } from "../spherical/index.js"
 
 export class Polyhedron implements Spherical {
   joints: Array<Joint>

@@ -1,2 +1,2 @@
-export * from "./ConcatPath"
-export * from "./Path"
+export * from "./ConcatPath.js"
+export * from "./Path.js"

@@ -1,7 +1,7 @@
-import * as Cells from "../cells"
-import * as Elements from "../elements"
-import * as Errors from "../errors"
-import { Spherical } from "../spherical"
+import * as Cells from "../cells/index.js"
+import * as Elements from "../elements/index.js"
+import * as Errors from "../errors/index.js"
+import { type Spherical } from "../spherical/index.js"
 
 export class Polygon implements Spherical {
   edges: Record<string, Cells.Edge>

@@ -1,5 +1,5 @@
-import { Goal } from "../goal"
-import { Subst } from "../subst"
+import { Goal } from "../goal/index.js"
+import { Subst } from "../subst/index.js"
 
 export class GoalQueue {
   subst: Subst

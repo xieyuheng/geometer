@@ -1,6 +1,6 @@
-import { Path } from "."
-import * as Errors from "../../errors"
-import * as Sphericals from "../../sphericals"
+import * as Errors from "../../errors/index.js"
+import * as Sphericals from "../../sphericals/index.js"
+import { type Path } from "./index.js"
 
 export class ConcatPath implements Path {
   paths: Array<Path>

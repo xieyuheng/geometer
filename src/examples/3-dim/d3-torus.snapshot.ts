@@ -1,4 +1,4 @@
-import { Complex } from "../.."
+import { Complex } from "../../index.js"
 
 {
   const d3_torus = new Complex()

@@ -1,8 +1,8 @@
-import { Cell } from "../cell"
-import { Id } from "../complex"
-import * as Elements from "../elements"
-import * as Goals from "../goals"
-import * as Sphericals from "../sphericals"
+import { type Cell } from "../cell/index.js"
+import { Id } from "../complex/index.js"
+import * as Elements from "../elements/index.js"
+import * as Goals from "../goals/index.js"
+import * as Sphericals from "../sphericals/index.js"
 
 export class Face implements Cell, Elements.Surface {
   id: Id

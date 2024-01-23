@@ -1,4 +1,4 @@
-import ld, { Complex } from ".."
+import ld, { Complex } from "../index.js"
 
 {
   const torus = new Complex()

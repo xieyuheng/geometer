@@ -1,5 +1,5 @@
-import * as Cells from "../cells"
-import * as Sphericals from "../sphericals"
+import * as Cells from "../cells/index.js"
+import * as Sphericals from "../sphericals/index.js"
 
 export class Id {
   dim: number

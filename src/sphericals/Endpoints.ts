@@ -1,5 +1,5 @@
-import * as Cells from "../cells"
-import { Spherical } from "../spherical"
+import * as Cells from "../cells/index.js"
+import { type Spherical } from "../spherical/index.js"
 
 export class Endpoints implements Spherical {
   start: Cells.Node

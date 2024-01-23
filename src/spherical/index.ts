@@ -1,1 +1,1 @@
-export * from "./Spherical"
+export * from "./Spherical.js"
