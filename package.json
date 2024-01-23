@@ -1,12 +1,12 @@
 {
-  "name": "@xieyuheng/lowdim",
-  "title": "LowDim",
+  "name": "@xieyuheng/geometer",
+  "title": "Geometer",
   "version": "0.0.2",
   "license": "GPL-3.0-or-later",
   "author": "Xie Yuheng",
   "repository": "github:xieyuheng/lowdim",
   "files": [
-    "lib"
+    "src", "lib"
   ],
   "scripts": {
     "build": "npx tsc",

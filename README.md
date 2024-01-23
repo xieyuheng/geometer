@@ -1,17 +1,17 @@
-# LowDim
+# Geometer
 
 Low dimensional (0, 1, 2, 3 maybe 4 dimension) topology and geometry.
-- implemented by cell complex.
 
 ## Contributions
 
-> Be polite, do not bring negative emotion to others.
+To make a contribution, fork this project and create a pull request.
 
-- [TODO.md](TODO.md)
-- [STYLE-GUIDE.md](STYLE-GUIDE.md)
-- [CODE-OF-CONDUCT.md](CODE-OF-CONDUCT.md)
-- When contributing, add yourself to [AUTHORS](AUTHORS)
+Please read the [STYLE-GUIDE.md](STYLE-GUIDE.md) before you change the code.
+
+Remember to add yourself to [AUTHORS](AUTHORS).
+Your line belongs to you, you can write a little
+introduction to yourself but not too long.
 
 ## License
 
-- [GPLv3](LICENSE)
+[GPLv3](LICENSE)
