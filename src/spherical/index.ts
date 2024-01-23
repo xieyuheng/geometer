@@ -1,1 +1,1 @@
-export * from "./spherical"
+export * from "./Spherical"

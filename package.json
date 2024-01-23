@@ -9,18 +9,18 @@
     "lib"
   ],
   "scripts": {
-    "build": "npx tsc",
-    "watch": "npx tsc --watch",
-    "format": "npx prettier src --write",
+    "build": "rm -rf lib && tsc",
+    "build:watch": "rm -rf lib && tsc --watch",
     "test:js": "test-runner test node 'lib/**/*.test.js'",
     "test:snapshot": "test-runner snapshot node 'lib/**/*.snapshot.js' --extern snapshot",
-    "test": "npm run test:js && npm run test:snapshot"
+    "test": "npm run test:js && npm run test:snapshot",
+    "format": "prettier src --write"
   },
   "devDependencies": {
     "@types/node": "^20.11.5",
+    "@xieyuheng/test-runner": "^0.2.10",
     "prettier": "^3.2.4",
     "prettier-plugin-organize-imports": "^3.2.4",
-    "typescript": "^5.3.3",
-    "@xieyuheng/test-runner": "^0.2.10"
+    "typescript": "^5.3.3"
   }
 }

@@ -1,1 +1,1 @@
-export * from "./invalide-element"
+export * from "./InvalideElement"

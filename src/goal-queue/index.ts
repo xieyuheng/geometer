@@ -1,1 +1,1 @@
-export * from "./goal-queue"
+export * from "./GoalQueue"

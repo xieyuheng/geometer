@@ -1,2 +1,2 @@
-export * from "./glue-surface"
-export * from "./surface"
+export * from "./GlueSurface"
+export * from "./Surface"

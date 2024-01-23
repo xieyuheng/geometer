@@ -1,1 +1,1 @@
-export * from "./subst"
+export * from "./Subst"

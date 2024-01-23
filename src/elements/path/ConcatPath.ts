@@ -1,6 +1,6 @@
+import { Path } from "."
 import * as Errors from "../../errors"
 import * as Sphericals from "../../sphericals"
-import { Path } from "../path"
 
 export class ConcatPath implements Path {
   paths: Array<Path>

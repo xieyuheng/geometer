@@ -1,4 +1,5 @@
 use esmodule
+rename ld to gm
 
 use TDD to make the design easy
 

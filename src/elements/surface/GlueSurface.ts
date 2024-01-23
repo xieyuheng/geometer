@@ -1,5 +1,5 @@
+import { Surface } from "."
 import * as Sphericals from "../../sphericals"
-import { Surface } from "../surface"
 
 export class GlueSurface implements Surface {
   constructor() {}

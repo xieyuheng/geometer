@@ -1,1 +1,1 @@
-export * from "./goal"
+export * from "./Goal"

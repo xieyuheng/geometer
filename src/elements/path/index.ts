@@ -1,2 +1,2 @@
-export * from "./concat-path"
-export * from "./path"
+export * from "./ConcatPath"
+export * from "./Path"
