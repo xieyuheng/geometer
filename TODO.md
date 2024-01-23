@@ -1,3 +1,5 @@
+rename repr to format
+
 rename ld to gm
 
 [maybe] we should not use class -- maybe we should for the inter-references

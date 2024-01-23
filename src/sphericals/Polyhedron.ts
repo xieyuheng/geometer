@@ -7,52 +7,42 @@ export class Polyhedron implements Spherical {
 
   constructor(pairs: Array<[Cells.Face, number, number, Cells.Face]>) {
     const joints = pairs.map((pair) => new Joint(...pair))
-    check_joints(joints)
+    checkJoints(joints)
     this.joints = joints
   }
 }
 
 export class Joint {
-  left_face: Cells.Face
-  left_side: number
-  right_side: number
-  right_face: Cells.Face
-
   constructor(
-    left_face: Cells.Face,
-    left_side: number,
-    right_side: number,
-    right_face: Cells.Face,
-  ) {
-    this.left_face = left_face
-    this.left_side = left_side
-    this.right_face = right_face
-    this.right_side = right_side
+    public leftFace: Cells.Face,
+    public leftSide: number,
+    public rightSide: number,
+    public rightFace: Cells.Face,
+  ) {}
+
+  get leftSegment(): Cells.Edge {
+    return this.leftFace.boundary.segment(this.leftSide)
   }
 
-  get left_segment(): Cells.Edge {
-    return this.left_face.boundary.segment(this.left_side)
-  }
-
-  get right_segment(): Cells.Edge {
-    return this.right_face.boundary.segment(this.right_side)
+  get rightSegment(): Cells.Edge {
+    return this.rightFace.boundary.segment(this.rightSide)
   }
 
   repr(): string {
     let s = "  "
-    s += `${this.left_face.id.repr()} -> ${this.left_side}`
+    s += `${this.leftFace.id.repr()} -> ${this.leftSide}`
     s += ` * `
-    s += `${this.right_side} <- ${this.right_face.id.repr()}`
+    s += `${this.rightSide} <- ${this.rightFace.id.repr()}`
     return s
   }
 }
 
-function check_joints(joints: Array<Joint>): void {
+function checkJoints(joints: Array<Joint>): void {
   if (joints.length === 0)
     throw new Error("To build a polyhedron, joints can not be empty.")
 
   for (const joint of joints) {
-    if (!joint.left_segment.id.eq(joint.right_segment.id)) {
+    if (!joint.leftSegment.id.eq(joint.rightSegment.id)) {
       throw new Error("In a joint paired sides should be the same edge.")
     }
   }
@@ -62,25 +52,25 @@ function check_joints(joints: Array<Joint>): void {
 
   for (const joint of joints) {
     {
-      const value = record.get(joint.left_face.id)
+      const value = record.get(joint.leftFace.id)
       if (value) {
-        value.sides.push(joint.left_side)
+        value.sides.push(joint.leftSide)
       } else {
-        record.set(joint.left_face.id, {
-          face: joint.left_face,
-          sides: [joint.left_side],
+        record.set(joint.leftFace.id, {
+          face: joint.leftFace,
+          sides: [joint.leftSide],
         })
       }
     }
 
     {
-      const value = record.get(joint.right_face.id)
+      const value = record.get(joint.rightFace.id)
       if (value) {
-        value.sides.push(joint.right_side)
+        value.sides.push(joint.rightSide)
       } else {
-        record.set(joint.right_face.id, {
-          face: joint.right_face,
-          sides: [joint.right_side],
+        record.set(joint.rightFace.id, {
+          face: joint.rightFace,
+          sides: [joint.rightSide],
         })
       }
     }

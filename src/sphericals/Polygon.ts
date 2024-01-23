@@ -7,8 +7,8 @@ export class Polygon implements Spherical {
   edges: Record<string, Cells.Edge>
 
   constructor(edges: Record<string, Cells.Edge>) {
-    check_edges_close(Object.values(edges))
-    Elements.check_paths(Object.values(edges))
+    checkEdgesClose(Object.values(edges))
+    Elements.checkPaths(Object.values(edges))
     this.edges = edges
   }
 
@@ -25,7 +25,7 @@ export class Polygon implements Spherical {
   }
 }
 
-function check_edges_close(edges: Array<Cells.Edge>): void {
+function checkEdgesClose(edges: Array<Cells.Edge>): void {
   const head = edges[0]
   const last = edges[edges.length - 1]
 

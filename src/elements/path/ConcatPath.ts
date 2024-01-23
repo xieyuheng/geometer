@@ -6,7 +6,7 @@ export class ConcatPath implements Path {
   paths: Array<Path>
 
   constructor(paths: Array<Path>) {
-    check_paths(paths)
+    checkPaths(paths)
     this.paths = paths
   }
 
@@ -23,7 +23,7 @@ export class ConcatPath implements Path {
   }
 }
 
-export function check_paths(paths: Array<Path>): void {
+export function checkPaths(paths: Array<Path>): void {
   if (paths.length === 0) {
     throw new Errors.InvalideElement(
       "To form a path, the paths should at least have one edge.",
@@ -32,11 +32,11 @@ export function check_paths(paths: Array<Path>): void {
 
   for (let i = 0; i < paths.length; i++) {
     if (paths[i + 1] === undefined) return
-    check_path_pair(paths[i], paths[i + 1])
+    checkPathPair(paths[i], paths[i + 1])
   }
 }
 
-function check_path_pair(left: Path, right: Path): void {
+function checkPathPair(left: Path, right: Path): void {
   if (!left.boundary.end.id.eq(right.boundary.start.id)) {
     const end = left.boundary.end.repr()
     const start = right.boundary.start.repr()

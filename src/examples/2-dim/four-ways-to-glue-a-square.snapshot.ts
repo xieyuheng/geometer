@@ -7,14 +7,14 @@ import { Complex } from "../../index.js"
   const middle = sphere.node()
   const north = sphere.node()
 
-  const south_long = sphere.edge(south, middle)
-  const north_long = sphere.edge(middle, north)
+  const southLong = sphere.edge(south, middle)
+  const northLong = sphere.edge(middle, north)
 
   const surface = sphere.face({
-    a: south_long,
-    b: north_long,
-    c: north_long.inverse,
-    d: south_long.inverse,
+    a: southLong,
+    b: northLong,
+    c: northLong.inverse,
+    d: southLong.inverse,
   })
 
   console.log(sphere.repr())
@@ -39,38 +39,38 @@ import { Complex } from "../../index.js"
 }
 
 {
-  const klein_bottle = new Complex()
+  const kleinBottle = new Complex()
 
-  const origin = klein_bottle.node()
+  const origin = kleinBottle.node()
 
-  const toro = klein_bottle.edge(origin, origin)
-  const cross = klein_bottle.edge(origin, origin)
+  const toro = kleinBottle.edge(origin, origin)
+  const cross = kleinBottle.edge(origin, origin)
 
-  const surface = klein_bottle.face({
+  const surface = kleinBottle.face({
     a: toro,
     b: cross,
     c: toro.inverse,
     d: cross,
   })
 
-  console.log(klein_bottle.repr())
+  console.log(kleinBottle.repr())
 }
 
 {
-  const projective_plane = new Complex()
+  const projectivePlane = new Complex()
 
-  const start = projective_plane.node()
-  const end = projective_plane.node()
+  const start = projectivePlane.node()
+  const end = projectivePlane.node()
 
-  const left_rim = projective_plane.edge(start, end)
-  const right_rim = projective_plane.edge(end, start)
+  const leftRim = projectivePlane.edge(start, end)
+  const rightRim = projectivePlane.edge(end, start)
 
-  const surface = projective_plane.face({
-    a: left_rim,
-    b: right_rim,
-    c: left_rim,
-    d: right_rim,
+  const surface = projectivePlane.face({
+    a: leftRim,
+    b: rightRim,
+    c: leftRim,
+    d: rightRim,
   })
 
-  console.log(projective_plane.repr())
+  console.log(projectivePlane.repr())
 }

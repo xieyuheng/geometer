@@ -12,9 +12,9 @@ export class Body implements Cell {
   }
 
   repr(): string {
-    const joins_repr = this.boundary.joints
+    const joinsText = this.boundary.joints
       .map((joint) => joint.repr())
       .join("\n")
-    return `${this.id.repr()}: {\n${joins_repr}\n}`
+    return `${this.id.repr()}: {\n${joinsText}\n}`
   }
 }
