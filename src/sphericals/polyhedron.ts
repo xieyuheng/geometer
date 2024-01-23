@@ -1,7 +1,6 @@
-import { Spherical } from "../spherical"
-import { Id } from "../complex"
 import * as Cells from "../cells"
-import * as Elements from "../elements"
+import { Id } from "../complex"
+import { Spherical } from "../spherical"
 
 export class Polyhedron implements Spherical {
   joints: Array<Joint>
@@ -23,7 +22,7 @@ export class Joint {
     left_face: Cells.Face,
     left_side: number,
     right_side: number,
-    right_face: Cells.Face
+    right_face: Cells.Face,
   ) {
     this.left_face = left_face
     this.left_side = left_side
@@ -91,14 +90,14 @@ function check_joints(joints: Array<Joint>): void {
   for (const { face, sides } of record.values()) {
     if (Object.values(face.boundary.edges).length !== sides.length) {
       throw new Error(
-        "In a polyhedron, every side of every face must be used once."
+        "In a polyhedron, every side of every face must be used once.",
       )
     }
 
     if (new Set(sides).size !== sides.length) {
       throw new Error(
         "In a polyhedron, every side of every face must be used once.\n" +
-          "But duplication occurred.\n"
+          "But duplication occurred.\n",
       )
     }
   }

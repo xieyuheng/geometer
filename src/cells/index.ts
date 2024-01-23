@@ -1,4 +1,4 @@
-export * from "./node"
+export * from "./body"
 export * from "./edge"
 export * from "./face"
-export * from "./body"
+export * from "./node"

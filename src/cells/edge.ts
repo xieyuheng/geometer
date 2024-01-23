@@ -1,6 +1,5 @@
 import { Cell } from "../cell"
 import { Id } from "../complex"
-import * as Cells from "../cells"
 import * as Elements from "../elements"
 import * as Sphericals from "../sphericals"
 
@@ -30,7 +29,7 @@ export class Edge implements Cell, Elements.Path {
 export class InversedEdge extends Edge {
   boundary: Sphericals.Endpoints = new Sphericals.Endpoints(
     this.boundary.end,
-    this.boundary.start
+    this.boundary.start,
   )
 
   get inverse(): InversedEdge {

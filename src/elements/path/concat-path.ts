@@ -1,6 +1,6 @@
-import { Path } from "../path"
-import * as Sphericals from "../../sphericals"
 import * as Errors from "../../errors"
+import * as Sphericals from "../../sphericals"
+import { Path } from "../path"
 
 export class ConcatPath implements Path {
   paths: Array<Path>
@@ -13,7 +13,7 @@ export class ConcatPath implements Path {
   get boundary(): Sphericals.Endpoints {
     return new Sphericals.Endpoints(
       this.paths[0].boundary.start,
-      this.paths[this.paths.length - 1].boundary.end
+      this.paths[this.paths.length - 1].boundary.end,
     )
   }
 
@@ -26,7 +26,7 @@ export class ConcatPath implements Path {
 export function check_paths(paths: Array<Path>): void {
   if (paths.length === 0) {
     throw new Errors.InvalideElement(
-      "To form a path, the paths should at least have one edge."
+      "To form a path, the paths should at least have one edge.",
     )
   }
 
@@ -45,7 +45,7 @@ function check_path_pair(left: Path, right: Path): void {
         `The given paths does **not** form a path, due to boundary mismatch:`,
         `  left.boundary.end: ${end} `,
         `  right.boundary.start: ${start}`,
-      ].join("\n")
+      ].join("\n"),
     )
   }
 }

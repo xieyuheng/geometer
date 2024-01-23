@@ -1,9 +1,8 @@
 import { Cell } from "../cell"
 import { Id } from "../complex"
-import * as Cells from "../cells"
 import * as Elements from "../elements"
-import * as Sphericals from "../sphericals"
 import * as Goals from "../goals"
+import * as Sphericals from "../sphericals"
 
 export class Face implements Cell, Elements.Surface {
   id: Id

@@ -19,7 +19,7 @@ export class GoalQueue {
       // push front |   depth first
       // push back  | breadth first
       // NOTE `concat` is like push back
-      (queue) => new GoalQueue(queue.subst, this.goals.concat(queue.goals))
+      (queue) => new GoalQueue(queue.subst, this.goals.concat(queue.goals)),
     )
   }
 }

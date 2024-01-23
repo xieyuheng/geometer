@@ -1,3 +1,5 @@
+use esmodule
+
 use TDD to make the design easy
 
 `api` -- toplevel API

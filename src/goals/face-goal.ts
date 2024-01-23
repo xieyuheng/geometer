@@ -1,6 +1,6 @@
 import { Goal } from "../goal"
-import { Subst } from "../subst"
 import { GoalQueue } from "../goal-queue"
+import { Subst } from "../subst"
 
 export class FaceGoal implements Goal {
   evaluate(subst: Subst): Array<GoalQueue> {

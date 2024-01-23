@@ -1,4 +1,4 @@
-import ld, { Complex } from ".."
+import { Complex } from ".."
 
 {
   const torus = new Complex()

@@ -1,7 +1,7 @@
-import { Spherical } from "../spherical"
 import * as Cells from "../cells"
 import * as Elements from "../elements"
 import * as Errors from "../errors"
+import { Spherical } from "../spherical"
 
 export class Polygon implements Spherical {
   edges: Record<string, Cells.Edge>

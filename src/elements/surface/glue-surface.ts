@@ -1,6 +1,5 @@
-import { Surface } from "../surface"
 import * as Sphericals from "../../sphericals"
-import * as Errors from "../../errors"
+import { Surface } from "../surface"
 
 export class GlueSurface implements Surface {
   constructor() {}

@@ -1,6 +1,5 @@
 import { Cell } from "../cell"
 import { Id } from "../complex"
-import * as Cells from "../cells"
 import * as Sphericals from "../sphericals"
 
 export class Body implements Cell {
