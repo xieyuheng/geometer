@@ -17,7 +17,7 @@ import { Complex } from "../../index.js"
     d: southLong.inverse,
   })
 
-  console.log(sphere.repr())
+  console.log(sphere.format())
 }
 
 {
@@ -35,7 +35,7 @@ import { Complex } from "../../index.js"
     d: polo.inverse,
   })
 
-  console.log(torus.repr())
+  console.log(torus.format())
 }
 
 {
@@ -53,7 +53,7 @@ import { Complex } from "../../index.js"
     d: cross,
   })
 
-  console.log(kleinBottle.repr())
+  console.log(kleinBottle.format())
 }
 
 {
@@ -72,5 +72,5 @@ import { Complex } from "../../index.js"
     d: rightRim,
   })
 
-  console.log(projectivePlane.repr())
+  console.log(projectivePlane.format())
 }

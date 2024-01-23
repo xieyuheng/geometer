@@ -28,11 +28,11 @@ export class Joint {
     return this.rightFace.boundary.segment(this.rightSide)
   }
 
-  repr(): string {
+  format(): string {
     let s = "  "
-    s += `${this.leftFace.id.repr()} -> ${this.leftSide}`
+    s += `${this.leftFace.id.format()} -> ${this.leftSide}`
     s += ` * `
-    s += `${this.rightSide} <- ${this.rightFace.id.repr()}`
+    s += `${this.rightSide} <- ${this.rightFace.id.format()}`
     return s
   }
 }

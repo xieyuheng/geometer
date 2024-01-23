@@ -14,7 +14,7 @@ export class Id {
     return this.dim === that.dim && this.n === that.n
   }
 
-  repr(): string {
+  format(): string {
     return `(${this.dim} ${this.n})`
   }
 }
@@ -60,25 +60,25 @@ export class Complex {
     return body
   }
 
-  repr(): string {
+  format(): string {
     let s = ""
 
     if (this.nodes.length > 0) {
       s += "nodes:\n"
-      s += this.nodes.map((node) => node.repr()).join(", ")
+      s += this.nodes.map((node) => node.format()).join(", ")
       s += "\n"
     }
 
     if (this.edges.length > 0) {
       s += "edges:\n"
-      s += this.edges.map((edge) => edge.repr()).join("\n")
+      s += this.edges.map((edge) => edge.format()).join("\n")
       s += "\n"
     }
 
     if (this.faces.length > 0) {
       s += "faces:\n"
       for (const face of this.faces) {
-        s += face.repr()
+        s += face.format()
         s += "\n"
       }
     }
@@ -86,7 +86,7 @@ export class Complex {
     if (this.bodies.length > 0) {
       s += "bodies:\n"
       for (const body of this.bodies) {
-        s += body.repr()
+        s += body.format()
         s += "\n"
       }
     }

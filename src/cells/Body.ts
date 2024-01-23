@@ -11,10 +11,10 @@ export class Body implements Cell {
     this.boundary = boundary
   }
 
-  repr(): string {
+  format(): string {
     const joinsText = this.boundary.joints
-      .map((joint) => joint.repr())
+      .map((joint) => joint.format())
       .join("\n")
-    return `${this.id.repr()}: {\n${joinsText}\n}`
+    return `${this.id.format()}: {\n${joinsText}\n}`
   }
 }

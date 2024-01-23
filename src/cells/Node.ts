@@ -11,7 +11,7 @@ export class Node implements Cell {
     this.boundary = boundary
   }
 
-  repr(): string {
-    return `${this.id.repr()}`
+  format(): string {
+    return `${this.id.format()}`
   }
 }

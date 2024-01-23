@@ -9,5 +9,5 @@ import { Complex } from "../../index.js"
   const f = graph.edge(a, b)
   const g = graph.edge(b, a)
 
-  console.log(graph.repr())
+  console.log(graph.format())
 }

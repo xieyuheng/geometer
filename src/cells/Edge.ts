@@ -12,9 +12,9 @@ export class Edge implements Cell, Elements.Path {
     this.boundary = boundary
   }
 
-  repr(): string {
+  format(): string {
     const { start, end } = this.boundary
-    return `${this.id.repr()}: ${start.repr()} -> ${end.repr()}`
+    return `${this.id.format()}: ${start.format()} -> ${end.format()}`
   }
 
   get inverse(): InversedEdge {

@@ -45,5 +45,5 @@ import { Complex } from "../../index.js"
   //   cp(c0, c1, c2, b0),
   // ])
 
-  console.log(d3Torus.repr())
+  console.log(d3Torus.format())
 }

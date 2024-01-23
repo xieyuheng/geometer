@@ -17,9 +17,9 @@ export class ConcatPath implements Path {
     )
   }
 
-  repr(): string {
+  format(): string {
     const { start, end } = this.boundary
-    return `TODO: ${start.repr()} -> ${end.repr()}`
+    return `TODO: ${start.format()} -> ${end.format()}`
   }
 }
 
@@ -38,8 +38,8 @@ export function checkPaths(paths: Array<Path>): void {
 
 function checkPathPair(left: Path, right: Path): void {
   if (!left.boundary.end.id.eq(right.boundary.start.id)) {
-    const end = left.boundary.end.repr()
-    const start = right.boundary.start.repr()
+    const end = left.boundary.end.format()
+    const start = right.boundary.start.format()
     throw new Errors.InvalideElement(
       [
         `The given paths does **not** form a path, due to boundary mismatch:`,

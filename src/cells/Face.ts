@@ -13,11 +13,11 @@ export class Face implements Cell, Elements.Surface {
     this.boundary = boundary
   }
 
-  repr(): string {
+  format(): string {
     const boundaryText = Object.values(this.boundary.edges)
-      .map((edge) => `${edge.sign === 1 ? "+" : "-"}${edge.id.repr()}`)
+      .map((edge) => `${edge.sign === 1 ? "+" : "-"}${edge.id.format()}`)
       .join(", ")
-    return `${this.id.repr()}: [${boundaryText}]`
+    return `${this.id.format()}: [${boundaryText}]`
   }
 
   o(vars: Record<string, string>): Goals.FaceGoal {
