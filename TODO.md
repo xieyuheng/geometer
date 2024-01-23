@@ -1,8 +1,8 @@
 use TDD to make the design easy
 
 `api` -- toplevel API
- - `ld.path` -- use `elements/ConcatPath`
- - `ld.surface` -- use `elements/GlueSurface`
+ - `gm.path` -- use `elements/ConcatPath`
+ - `gm.surface` -- use `elements/GlueSurface`
 
 `Face.o` -- like logic programming's goal -- `FaceGoal`
 
