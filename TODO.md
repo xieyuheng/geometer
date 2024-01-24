@@ -1,3 +1,5 @@
+can an expression be viewed independently? -- without in a context (`Complex`)
+
 use TDD to make the design easy
 
 `api` -- toplevel API
