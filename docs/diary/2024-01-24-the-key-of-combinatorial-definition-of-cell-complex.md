@@ -22,3 +22,36 @@ face: p * q * p^[-1] * q^[-1]
 其实回到定义，
 即回到 cell complex 的 attaching map 的定义，
 就能想明白这一点！
+
+# 关于 Polyhedron 的方式
+
+也许我们不应该先构造 Polyhedron，
+再考虑以它为基础的 attaching map，
+而是应该像一维的代数一样，先确定二维的代数。
+
+```scheme
+(shell
+  (f1 :a :b :c)
+  (f2 :b :c :d)
+  (f3 :a :d))
+```
+
+注意：
+
+- 之后还需要检查是球面而不是圆环面，等等。
+- TODO 是否还需要对面给以方向呢？
+
+正如一维的代数：
+
+```scheme
+(path
+  (e1 :a :b)
+  (e2 :a :c)
+  (e3 :c :b))
+```
+
+不能先定义 Polyhedron，
+是因为 Polyhedron 的定义是有问题的
+（例如 [Proofs and Refutations: The Logic of Mathematical Discovery](https://en.wikipedia.org/wiki/Proofs_and_Refutations) 这本书），
+可能我们就是要通过这样用 cell complex 来构造 Polyhedron，
+才能给出 Polyhedron 的正确定义。
