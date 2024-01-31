@@ -40,6 +40,8 @@ face: p * q * p^[-1] * q^[-1]
 
 - 之后还需要检查是球面而不是圆环面，等等。
 - TODO 是否还需要对面给以方向呢？
+  - 我们需要证明当 fn 都不同时，这样的方式可以定义 Polyhedron。
+    - https://en.wikipedia.org/wiki/Net_(polyhedron)
 
 正如一维的代数：
 
