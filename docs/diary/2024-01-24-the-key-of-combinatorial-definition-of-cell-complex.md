@@ -39,9 +39,9 @@ face: p * q * p^[-1] * q^[-1]
 注意：
 
 - 之后还需要检查是球面而不是圆环面，等等。
-- TODO 是否还需要对面给以方向呢？
-  - 我们需要证明当 fn 都不同时，这样的方式可以定义 Polyhedron。
-    - https://en.wikipedia.org/wiki/Net_(polyhedron)
+- 我们不需要给出额外的定向信息。
+  正如在描述 Path 时，如果用了类似的语法，那就也不用给出定向信息。
+  定向不是简单的正负，而是具体的粘连方式。
 
 正如一维的代数：
 
@@ -57,3 +57,7 @@ face: p * q * p^[-1] * q^[-1]
 （例如 [Proofs and Refutations: The Logic of Mathematical Discovery](https://en.wikipedia.org/wiki/Proofs_and_Refutations) 这本书），
 可能我们就是要通过这样用 cell complex 来构造 Polyhedron，
 才能给出 Polyhedron 的正确定义。
+
+TODO 我们需要证明当按照上面的 `(shell)` 语法所定义的 shell 的各个面都不同时，
+这样的方式可以定义 Polyhedron。
+- https://en.wikipedia.org/wiki/Net_(polyhedron)
