@@ -1,12 +1,12 @@
 import { type Cell } from "../cell/index.js"
 import { Id } from "../complex/index.js"
-import * as Sphericals from "../sphericals/index.js"
+import * as Boundaries from "../boundaries/index.js"
 
 export class Body implements Cell {
   id: Id
-  boundary: Sphericals.Polyhedron
+  boundary: Boundaries.Polyhedron
 
-  constructor(id: Id, boundary: Sphericals.Polyhedron) {
+  constructor(id: Id, boundary: Boundaries.Polyhedron) {
     this.id = id
     this.boundary = boundary
   }

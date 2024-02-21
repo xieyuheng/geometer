@@ -1,10 +1,10 @@
-import * as Sphericals from "../../sphericals/index.js"
+import * as Boundaries from "../../boundaries/index.js"
 import { type Shell } from "./index.js"
 
 export class GlueShell implements Shell {
   constructor() {}
 
-  get boundary(): Sphericals.Polygon {
+  get boundary(): Boundaries.Polygon {
     throw new Error("TODO")
   }
 

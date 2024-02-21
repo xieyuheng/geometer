@@ -1,6 +1,6 @@
-import { type Spherical } from "../spherical/index.js"
+import { type Boundary } from "../boundary/index.js"
 
 export interface Element {
-  boundary: Spherical
+  boundary: Boundary
   format(): string
 }

@@ -1,9 +1,9 @@
 import * as Cells from "../cells/index.js"
 import * as Elements from "../elements/index.js"
 import * as Errors from "../errors/index.js"
-import { type Spherical } from "../spherical/index.js"
+import { type Boundary } from "../boundary/index.js"
 
-export class Polygon implements Spherical {
+export class Polygon implements Boundary {
   edges: Record<string, Cells.Edge>
 
   constructor(edges: Record<string, Cells.Edge>) {

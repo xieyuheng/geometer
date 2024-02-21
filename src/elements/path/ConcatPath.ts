@@ -1,5 +1,5 @@
 import * as Errors from "../../errors/index.js"
-import * as Sphericals from "../../sphericals/index.js"
+import * as Boundaries from "../../boundaries/index.js"
 import { type Path } from "./index.js"
 
 export class ConcatPath implements Path {
@@ -10,8 +10,8 @@ export class ConcatPath implements Path {
     this.paths = paths
   }
 
-  get boundary(): Sphericals.Endpoints {
-    return new Sphericals.Endpoints(
+  get boundary(): Boundaries.Endpoints {
+    return new Boundaries.Endpoints(
       this.paths[0].boundary.start,
       this.paths[this.paths.length - 1].boundary.end,
     )

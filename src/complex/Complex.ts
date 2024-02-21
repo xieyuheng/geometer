@@ -1,5 +1,5 @@
 import * as Cells from "../cells/index.js"
-import * as Sphericals from "../sphericals/index.js"
+import * as Boundaries from "../boundaries/index.js"
 
 export class Id {
   dim: number
@@ -34,28 +34,28 @@ export class Complex {
 
   node(): Cells.Node {
     const id = new Id(0, this.nodes.length)
-    const node = new Cells.Node(id, new Sphericals.Void())
+    const node = new Cells.Node(id, new Boundaries.Void())
     this.nodes.push(node)
     return node
   }
 
   edge(start: Cells.Node, end: Cells.Node): Cells.Edge {
     const id = new Id(1, this.edges.length)
-    const edge = new Cells.Edge(id, new Sphericals.Endpoints(start, end))
+    const edge = new Cells.Edge(id, new Boundaries.Endpoints(start, end))
     this.edges.push(edge)
     return edge
   }
 
   face(edges: Record<string, Cells.Edge>): Cells.Face {
     const id = new Id(2, this.face.length)
-    const face = new Cells.Face(id, new Sphericals.Polygon(edges))
+    const face = new Cells.Face(id, new Boundaries.Polygon(edges))
     this.faces.push(face)
     return face
   }
 
   body(pairs: Array<[Cells.Face, number, number, Cells.Face]>): Cells.Body {
     const id = new Id(3, this.bodies.length)
-    const body = new Cells.Body(id, new Sphericals.Polyhedron(pairs))
+    const body = new Cells.Body(id, new Boundaries.Polyhedron(pairs))
     this.bodies.push(body)
     return body
   }

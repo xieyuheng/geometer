@@ -1,8 +1,8 @@
 import * as Cells from "../cells/index.js"
 import { Id } from "../complex/index.js"
-import { type Spherical } from "../spherical/index.js"
+import { type Boundary } from "../boundary/index.js"
 
-export class Polyhedron implements Spherical {
+export class Polyhedron implements Boundary {
   joints: Array<Joint>
 
   constructor(pairs: Array<[Cells.Face, number, number, Cells.Face]>) {

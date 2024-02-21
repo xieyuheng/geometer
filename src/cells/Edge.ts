@@ -1,13 +1,13 @@
 import { type Cell } from "../cell/index.js"
 import { Id } from "../complex/index.js"
 import * as Elements from "../elements/index.js"
-import * as Sphericals from "../sphericals/index.js"
+import * as Boundaries from "../boundaries/index.js"
 
 export class Edge implements Cell, Elements.Path {
   id: Id
-  boundary: Sphericals.Endpoints
+  boundary: Boundaries.Endpoints
 
-  constructor(id: Id, boundary: Sphericals.Endpoints) {
+  constructor(id: Id, boundary: Boundaries.Endpoints) {
     this.id = id
     this.boundary = boundary
   }
@@ -27,7 +27,7 @@ export class Edge implements Cell, Elements.Path {
 }
 
 export class InversedEdge extends Edge {
-  boundary: Sphericals.Endpoints = new Sphericals.Endpoints(
+  boundary: Boundaries.Endpoints = new Boundaries.Endpoints(
     this.boundary.end,
     this.boundary.start,
   )

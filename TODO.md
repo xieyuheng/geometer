@@ -1,4 +1,4 @@
-remove `sphericals/` -- use `boundaries/`
+remove the use of `edge.inverse` -- use `orientedEdges`
 
 can an expression be viewed independently? -- without in a context (`Complex`)
 
@@ -6,7 +6,7 @@ use TDD to make the design easy
 
 `api` -- toplevel API
  - `gm.path` -- use `elements/ConcatPath`
- - `gm.surface` -- use `elements/GlueSurface`
+ - `gm.shell` -- use `elements/GlueSurface`
 
 `Polyhedron` -- should have named boundary faces
 
