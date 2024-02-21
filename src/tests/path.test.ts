@@ -3,6 +3,47 @@ import { Complex, gm } from "../index.js"
 {
   const torus = new Complex()
 
+  // gm.defineNode(torus, "origin")
+  // gm.defineEdge(torus, "toro", { start: origin, end: origin })
+  // gm.defineEdge(torus, "polo", { start: origin, end: origin })
+  // gm.defineFace(torus, "spoke", {
+  //   a: toro,
+  //   b: polo,
+  //   c: toro.inverse,
+  //   d: polo.inverse,
+  // })
+
+  const origin = torus.node()
+
+  const toro = torus.edge(origin, origin)
+  const polo = torus.edge(origin, origin)
+
+  const spoke = torus.face({
+    a: toro,
+    b: polo,
+    c: toro.inverse,
+    d: polo.inverse,
+  })
+
+  const path = gm.path([
+    toro,
+    polo,
+    toro,
+    gm.path([toro, toro, toro]),
+    gm.path([toro, toro, toro]),
+    gm.path([
+      toro,
+      toro,
+      toro,
+      gm.path([toro, toro, toro]),
+      gm.path([toro, toro, toro]),
+    ]),
+  ])
+}
+
+{
+  const torus = new Complex()
+
   const origin = torus.node()
 
   const toro = torus.edge(origin, origin)
