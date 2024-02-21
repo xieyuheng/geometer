@@ -1,3 +1,18 @@
+cell should be a sum type -- instead of class
+
+boundary should be a sum type -- instead of class
+
+- add prefix to boundary name -- no special names
+
+  ```
+  NodeBoundary
+  EdgeBoundary
+  FaceBoundary
+  BodyBoundary
+  ```
+
+complex should be a simple record -- instead of class
+
 remove the use of `edge.inverse` -- use `orientedEdges`
 
 can an expression be viewed independently? -- without in a context (`Complex`)
