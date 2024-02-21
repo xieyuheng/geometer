@@ -1,7 +1,7 @@
 import * as Sphericals from "../../sphericals/index.js"
-import { type Surface } from "./index.js"
+import { type Shell } from "./index.js"
 
-export class GlueSurface implements Surface {
+export class GlueShell implements Shell {
   constructor() {}
 
   get boundary(): Sphericals.Polygon {
@@ -13,7 +13,7 @@ export class GlueSurface implements Surface {
   // }
 }
 
-// const s = new GlueSurface([
+// const s = new GlueShell([
 //   ap.o({ 0: "b3", 1: "c2", 2: "a2", 3: "c0" }),
 //   bp.o({ 0: "b0", 1: "a2", 2: "c1", 3: "b3" }),
 //   cp.o({ 0: "c0", 1: "c1", 2: "c2", 3: "b0" }),

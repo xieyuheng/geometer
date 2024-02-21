@@ -16,13 +16,13 @@ import { Complex } from "../index.js"
   })
 
   // const s1 = gm
-  //   .surface([
+  //   .shell([
   //     spoke.o({ a: "a1", b: "b", c: "c", d: "d" }),
   //     spoke.o({ a: "a2", b: "b", c: "c", d: "d" }),
   //   ])
   //   .remain(["a1", "a2"])
 
-  // gm.surface([
+  // gm.shell([
   //   s1.o({ a1: "a1", a2: "a" }),
   //   s1.o({ a1: "a", a2: "b" }),
   //   s1.o({ a1: "b", a2: "a2" }),

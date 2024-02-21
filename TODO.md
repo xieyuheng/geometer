@@ -1,5 +1,3 @@
-rename `surface/` to `shell/`
-
 remove `sphericals/` -- use `boundaries/`
 
 can an expression be viewed independently? -- without in a context (`Complex`)

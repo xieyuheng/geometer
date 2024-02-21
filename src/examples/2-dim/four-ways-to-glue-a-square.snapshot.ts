@@ -10,7 +10,7 @@ import { Complex } from "../../index.js"
   const southLong = sphere.edge(south, middle)
   const northLong = sphere.edge(middle, north)
 
-  const surface = sphere.face({
+  const shell = sphere.face({
     a: southLong,
     b: northLong,
     c: northLong.inverse,
@@ -46,7 +46,7 @@ import { Complex } from "../../index.js"
   const toro = kleinBottle.edge(origin, origin)
   const cross = kleinBottle.edge(origin, origin)
 
-  const surface = kleinBottle.face({
+  const shell = kleinBottle.face({
     a: toro,
     b: cross,
     c: toro.inverse,
@@ -65,7 +65,7 @@ import { Complex } from "../../index.js"
   const leftRim = projectivePlane.edge(start, end)
   const rightRim = projectivePlane.edge(end, start)
 
-  const surface = projectivePlane.face({
+  const shell = projectivePlane.face({
     a: leftRim,
     b: rightRim,
     c: leftRim,

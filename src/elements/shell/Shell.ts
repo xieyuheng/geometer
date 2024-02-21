@@ -1,5 +1,5 @@
 import * as Sphericals from "../../sphericals/index.js"
 
-export interface Surface {
+export interface Shell {
   boundary: Sphericals.Polygon
 }

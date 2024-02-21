@@ -3,7 +3,7 @@ import { Id } from "../complex/index.js"
 import * as Elements from "../elements/index.js"
 import * as Sphericals from "../sphericals/index.js"
 
-export class Face implements Cell, Elements.Surface {
+export class Face implements Cell, Elements.Shell {
   id: Id
   boundary: Sphericals.Polygon
 
