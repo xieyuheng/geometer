@@ -1,10 +1,7 @@
 {
-  "name": "@xieyuheng/geometer",
+  "name": "geometer",
   "version": "0.1.0",
-  "license": "GPL-3.0-or-later",
-  "author": "Xie Yuheng",
   "type": "module",
-  "repository": "github:xieyuheng/geometer",
   "files": [
     "src",
     "lib"
