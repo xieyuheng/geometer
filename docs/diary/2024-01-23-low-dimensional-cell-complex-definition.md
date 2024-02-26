@@ -58,7 +58,7 @@ an edge in gluing list must connet to the next edge,
 and the last edge must connet back to the first edge.
 
 ```typescript
-type Polygon = { orientedEdges: Array<{ edge: Edge, sign: +1 | -1 }> }
+type Polygon = { signedEdges: Array<{ edge: Edge, sign: +1 | -1 }> }
 ```
 
 In 3 dimension, to add a body to the complex,
