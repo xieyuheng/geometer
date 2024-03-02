@@ -1,6 +1,10 @@
 # Geometer
 
-Low dimensional (0, 1, 2, 3 maybe 4 dimension) topology and geometry.
+几何学家。
+
+- 一个醉心于几何学的人（像 Coxeter）。
+- 想要渲染出他自己对几何的想象。
+- 目前用 javascript 实现，最终要用 cicada 实现。
 
 ## Contributions
 
