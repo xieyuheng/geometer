@@ -1,6 +1,6 @@
 ---
 title: classification by normalization
-date: 2024-03-03
+date: 2024-03-02
 ---
 
 几何中的很多分类问题，
