@@ -1,11 +1,5 @@
 # Geometer
 
-几何学家。
-
-- 一个醉心于几何学的人（像 Coxeter）。
-- 想要渲染出他自己对几何的想象。
-- 目前用 javascript 实现，最终要用 cicada 实现。
-
 ## Contributions
 
 To make a contribution, fork this project and create a pull request.
