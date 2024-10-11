@@ -18,10 +18,10 @@
     "format": "prettier src --write"
   },
   "devDependencies": {
-    "@types/node": "^20.11.20",
+    "@types/node": "^22.7.5",
     "@xieyuheng/test-runner": "^0.2.10",
-    "prettier": "^3.2.5",
-    "prettier-plugin-organize-imports": "^3.2.4",
-    "typescript": "^5.3.3"
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "typescript": "^5.6.3"
   }
 }
