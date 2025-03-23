@@ -1,5 +1,5 @@
 ---
-title: polyhedral complex v.s. cell complex
+title: polyhedral complex vs. cell complex
 date: 2024-03-03
 ---
 
